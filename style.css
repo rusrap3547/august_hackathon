@@ -1,1 +1,59 @@
-#stye
+/* Style sheet for everything */
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+ background-color: #f0f0f0;
+ font-size: x-large;
+ text-align: center;
+}
+#firstPageBody {
+ background-image: url(https://as1.ftcdn.net/v2/jpg/05/57/97/76/1000_F_557977683_iVrC38tm99Ia8gKgvUZgfH5oPKFQ2IAO.jpg);
+ color: white;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+a {
+ text-decoration: none;
+ text-decoration-color: white;
+}
+
+a:visited {
+ text-decoration: none;
+ color: white;
+}
+
+#firstPageTest {
+ position: relative;
+}
+
+#tricksterButton {
+ padding: 10px 20px;
+ font-size: 16px;
+ cursor: pointer;
+ position: relative;
+}
+
+@keyframes moveButton {
+ 0% {
+  transform: translate(0, 0);
+ }
+ 25% {
+  transform: translate(150px, -150px);
+ }
+ 50% {
+  transform: translate(-150px, 150px); /* Bottom left */
+ }
+ 75% {
+  transform: translate(150px, 150px); /* Bottom right */
+ }
+ 100% {
+  transform: translate(-150px, -150px); /* Top left */
+ }
+}
+#tricksterButton:active {
+ animation: moveButton 0.3s linear infinite;
+}
